@@ -1,75 +1,129 @@
-# React + TypeScript + Vite
+# 📝 Task Manager App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern **React + Vite** web application designed to help users manage their daily tasks efficiently, explore posts from a public API, and experience responsive design powered by **Tailwind CSS**.  
 
-Currently, two official plugins are available:
+This project demonstrates **React Hooks**, **state management**, **routing**, **context API**, and **API integration** — all implemented with clean, maintainable code.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+### ✅ Task Management
+- Add new tasks  
+- Mark tasks as completed  
+- Delete tasks  
+- Filter tasks (All / Active / Completed)  
+- Persistent storage using **localStorage**  
 
-Note: This will impact Vite dev & build performances.
+### 🧠 State Management & Hooks
+- `useState` for managing component states  
+- `useEffect` for side effects and data loading  
+- `useContext` for theme switching (light/dark mode)  
+- Custom hook `useLocalStorage()` to save tasks persistently  
 
-## Expanding the ESLint configuration
+### 🌐 API Integration
+- Fetches posts from **JSONPlaceholder API**
+- Displays AI-generated English post titles and descriptions  
+- Search and pagination support  
+- Loading and error handling states  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 🎨 Styling & UI
+- Fully responsive design with **Tailwind CSS**  
+- Light/Dark mode toggle  
+- Clean modern UI layout using utility-first design principles  
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🧰 Tech Stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+| Tool | Purpose |
+|------|----------|
+| [React](https://react.dev/) | UI Library |
+| [Vite](https://vitejs.dev/) | Build Tool & Dev Server |
+| [Tailwind CSS](https://tailwindcss.com/) | Styling Framework |
+| [TypeScript](https://www.typescriptlang.org/) | Type Safety |
+| [React Router](https://reactrouter.com/) | Page Routing |
+| [JSONPlaceholder](https://jsonplaceholder.typicode.com/) | Public REST API for testing |
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📂 Project Structure
+src/
+   assets/
+   components/
+       Button
+       Card
+       Footer
+       Layout
+       Navbar
+       PostList
+    Context/
+      ThemeContext
+    hooks/
+      useLocalStorage
+    pages/
+      Home
+    App
+    App
+    Taskmanager
+    index
+    main
+   
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the Repository
+```bash
+react-js-jsx-and-css-mastering-front-end-development-iobulejo/Task-Manager
+cd task-manager
+2️⃣ Install Dependencies
+npm install
+npm run dev
+Then open your browser at http://localhost:5173
+
+npm run build
+npm run preview
+🌙 Theme Management
+
+The app uses React’s Context API for global theme state:
+
+Users can toggle between Light 🌞 and Dark 🌚 themes.
+
+The theme preference is stored in localStorage for persistence.
+
+The app fetches posts from:
+https://jsonplaceholder.typicode.com/posts
+Each post is reimagined into AI-generated English content dynamically using random topic and phrase generators.
+
+Example result:
+
+Title: “React Development enhances modern UI design”
+Body: “This post explores the principles of modern frontend architecture that simplify everyday tasks through practical examples.”
+
+
+<img width="2560" height="1440" alt="image" src="https://github.com/user-attachments/assets/73b3cdcf-37b3-4759-9d35-d81eb7c10943" />
+<img width="2560" height="1440" alt="image" src="https://github.com/user-attachments/assets/f4283810-554f-4b0e-a76b-992b6c4de2f1" />
+
+<img width="2560" height="1440" alt="image" src="https://github.com/user-attachments/assets/76ea91e7-0ad2-493c-9efe-95ce4c9e7642" />
+
+Author
+
+Ivan Obulejo
+Frontend Developer | React Enthusiast | Tailwind CSS Lover
+
+📧 Email: iobulejo100@gmail.com
+🐙 GitHub: iobulejo
+
+License
+
+This project is licensed under the MIT License.
+Feel free to use, modify, and distribute it for educational or commercial purposes.
+
+
+
+
+  
+   
+
+
